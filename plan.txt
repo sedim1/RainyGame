@@ -1,0 +1,20 @@
+#DIA LLUVIOSO
+
+Una hormiga que intenta sobrevivir las gotas de una lluvia
+
+-- Elementos Esenciales ----- (Si o si tenerlos listos para el final de la jam)
+#Mecanicas
+- Movimiento - Izquierda derecha
+- Gotas de lluvia - Se estaran generando al azar, la frecuencia con la que va callendo iran aumentando con el paso del tiempo
+
+#Sistemas
+- Sistema de Puntaje - Sistema de puntaje sencillo que ira incrementando con el paso del tiempo, (aumenta puntaje cada segundo que pasa)
+
+#Assets
+- Sprites de hormiga (izquierda y derecha, muerto)
+- Background (Para la pantalla principal y el gameplay)
+- Sprites de las gotas de lluvia
+- Texto de puntaje de la pantalla
+
+-- Elementos Adicionales ---- (Pueden estar, pero no son fundamentales para que el juego sea funcional)
+
