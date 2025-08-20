@@ -20,6 +20,7 @@ function Raindrop:Update(dt)
 		if self.position.y > 420.0 or self:isHittingPlayer() then
 			if self:isHittingPlayer() then
 				global.player.isDead = true
+				global.player:playDeadSound()
 			end
 			self.isActive = false
 		end
@@ -36,7 +37,7 @@ end
 
 function Raindrop:Draw()
 	if self.isActive then
-		love.graphics.setColor(1.0, 1.0, 1.0)
+		love.graphics.setColor(0.8, 0.8, 0.8)
 		love.graphics.draw(self.sprite[1], self.position.x, self.position.y)
 	end
 end

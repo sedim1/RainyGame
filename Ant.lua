@@ -10,9 +10,14 @@ function Ant:new(position)
 	o.direction = 1
 	o.speed = 800.0
 	o.isDead = false
+	o.deadSound = love.audio.newSource("Assets/hitHurt.wav", "stream")
 	table.insert(o.sprite, love.graphics.newImage("Assets/Ant.png"))
 	table.insert(o.sprite, love.graphics.newImage("Assets/Ant_left.png"))
 	return o
+end
+
+function Ant:playDeadSound()
+	self.deadSound:play()
 end
 
 function Ant:Move(dt)
@@ -25,6 +30,12 @@ function Ant:Move(dt)
 		self.direction = 1
 		self.position.x = self.position.x + self.speed * dt
 	end
+end
+
+function Ant:Reset(position)
+	self.position = position
+	self.direction = 1
+	self.isDead = false
 end
 
 function Ant:GetCollider()
@@ -43,7 +54,7 @@ end
 
 function Ant:Draw()
 	if self.isDead == false then
-		love.graphics.setColor(1.0, 1.0, 1.0)
+		love.graphics.setColor(0.8, 0.8, 0.8)
 		love.graphics.draw(self.sprite[self.direction], self.position.x, self.position.y)
 	end
 end
