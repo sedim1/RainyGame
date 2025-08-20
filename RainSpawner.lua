@@ -47,7 +47,6 @@ function RainSpawner:Update(dt)
 			raindrop:Update(dt)
 		end
 	end
-	--print(#self.raindrops)
 end
 
 return RainSpawner
